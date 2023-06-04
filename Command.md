@@ -116,3 +116,9 @@ file1をfile2にリネーム
 ```PowerShell
 Rename-Item file1 file2
 ```
+
+---
+### Windows - WebLogic Version
+```PowerShell
+Get-ChildItem "C:\Oracle\Middleware\wlserver*" -Directory | ForEach-Object { $_.FullName + " " + (Get-Content $_.FullName\server\lib\weblogic.jar | Select-String "WebLogic Server") }
+```
